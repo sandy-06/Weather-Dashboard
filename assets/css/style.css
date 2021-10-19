@@ -1,5 +1,15 @@
+* {
+    box-sizing: border-box;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
 header {
     background-color: blue;
     text-align: center;
     color:cornsilk;
+}
+
+h2 {
+    font-weight: bold;
 }
