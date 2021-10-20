@@ -13,3 +13,16 @@ header {
 h2 {
     font-weight: bold;
 }
+.forecast {
+    margin: 5px;
+    width:auto;
+    height: 100px;
+}
+.flex-box {
+    display:inline-flexbox;
+}
+.cards{
+  display:inline-block;
+}
+    
+    
