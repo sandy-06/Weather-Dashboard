@@ -2,6 +2,8 @@
     box-sizing: border-box;
     margin-left: 5px;
     margin-bottom: 5px;
+    max-height: fit-content;
+    -ms-flex-wrap: wrap;
 }
 
 header {
@@ -16,13 +18,23 @@ h2 {
 .forecast {
     margin: 5px;
     width:auto;
-    height: 100px;
+    height:200px;
+    border-radius: 25px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: black;
 }
 .flex-box {
     display:inline-flexbox;
 }
-.cards{
+.card{
   display:inline-block;
+  height: 150 px;
+  max-width: 100 px;
+  border-radius: 15 px;
+  border-style: solid;
+  border-width: 2 px;
+  border-color: black;
 }
     
-    
+
