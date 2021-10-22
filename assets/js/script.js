@@ -18,7 +18,8 @@ searchCityBtn[0].addEventListener("click", function () {
         console.log(res)
         var lat = res.city.coord.lat;
         var lon = res.city.coord.lon;
-        
+       //city date ,temp wind humidity uv index with color 
+
         var multiDay = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&exclude=minutely,hourly&appid=${apiKey}`
 
         fetch(multiDay).then(function (res) {
@@ -26,11 +27,13 @@ searchCityBtn[0].addEventListener("click", function () {
 
         }).then(function (data) {
             console.log(data)
+            console.log(data.current.temp)
+            return
         })
     })
 
     var fiveDay = function (res) {
-
+//future date icon tem wind humidity
     }
 })
 

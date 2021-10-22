@@ -7,51 +7,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/style.css">
     <title>Weather Dashboard</title>
 </head>
 
 <body>
     <header>
-        <div class="card-body text-center text-white">
+        <div class="text-center text-white">
             <h1>Weather Dashboard</h1>
         </div>
 
     </header>
     <!-- find a city-->
-    <div class="row align-items-start">
-        <div class="col-2">
-            <h2> Search for a City</h2>
-            <div class="row">
-                <textarea id="city"></textarea>
-            </div>
-            <div class="row">
-                <button id="btn" class='cityButton'>Search</button>
-            </div>
-            <!--col for choices made-->
-            <div class="row history">
+    <div class="container align-items-start">
+        <div class="row align-items-around">
 
+            <div class="col-2">
+                <h2> Search for a City</h2>
+                <div class="row">
+                    <textarea id="city"></textarea>
+                </div>
+                <div class="row">
+                    <button id="btn" class='cityButton'>Search</button>
+                </div>
+                <!--col for choices made-->
+                <div class="row history">
+                    <div class="row">
+                        <textarea id="city"></textarea>
+                    </div>
+                    <div class="row">
+                        <textarea id="city"></textarea>
+                    </div>
+                    <div class="row">
+                        <textarea id="city"></textarea>
+                    </div>
+                    <div class="row">
+                        <textarea id="city"></textarea>
+                    </div>
+                    <div class="row">
+                        <textarea id="city"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class=" col-9 container">
+                <div class="container forecast">
+                    <h2 id="today"></h2>
+                    <h3 id="temp0"></h3>
+                    <h3 id="wind0"></h3>
+                    <h3 id="humidity0"></h3>
+                    <h3 id="uv0"></h3>
+
+
+                </div>
+
+
+                <h3>5-Day Forecast:</h3>
+                <div class="row align-items-start">
+
+                    <div class="row ">
+                        <div class="col five">
+                            <textarea class=Date1></textarea>
+                            <textarea class=icon1></textarea>
+                            <textarea class=temp1></textarea>
+                            <textarea class=wind1></textarea>
+                            <textarea class=humidity1></textarea>
+                        </div>
+                        <div class="col five">
+                            <textarea class=Date2></textarea>
+                            <textarea class=Date2></textarea>
+                            <textarea class=Date2></textarea>
+                            <textarea class=Date2></textarea>
+                            <textarea class=Date2></textarea>
+                        </div>
+                        <div class="col five">
+                            <textarea class=Date1></textarea>
+                            <textarea class=icon1></textarea>
+                            <textarea class=temp1></textarea>
+                            <textarea class=wind1></textarea>
+                            <textarea class=humidity1></textarea>
+                        </div>
+                        <div class="col five">
+                            <textarea class=Date1></textarea>
+                            <textarea class=icon1></textarea>
+                            <textarea class=temp1></textarea>
+                            <textarea class=wind1></textarea>
+                            <textarea class=humidity1></textarea>
+                        </div>
+                        <div class="col five">
+                            <textarea class=Date1></textarea>
+                            <textarea class=icon1></textarea>
+                            <textarea class=temp1></textarea>
+                            <textarea class=wind1></textarea>
+                            <textarea class=humidity1></textarea>
+                        </div>
+                    </div>
+
+
+
+                </div>
             </div>
         </div>
-        <div class="col-8 container">
-            <div class="container forecast">
-
-
-            </div>
-
-
-            <h3>5-Day Forecast:</h3>
-            <div class="row align-items-start">
-
-                <div class="col-2 card"></div>
-                <div class="col-2 card"></div>
-                <div class="col-2 card"></div>
-                <div class="col-2 card"></div>
-                <div class="col-2 card"></div>
-            </div>
-
-
-        </div>
+    </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
