@@ -26,6 +26,6 @@ outside Api api.openweathermap.org
 
 ![alt text](assets/images/Screenshot181310.png));
 
-![alt text](assets/images/screenshot181452.png)
+![alt text](assets/images/screenshot181452.png);
 
 
