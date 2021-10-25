@@ -1,6 +1,8 @@
 # Weather-Dashboard
 https://sandy-06.github.io/Weather-Dashboard/   
 https://github.com/sandy-06/Weather-Dashboard/
+
+
 User story
 AS A traveler
 I WANT to see the weather outlook for multiple cities
