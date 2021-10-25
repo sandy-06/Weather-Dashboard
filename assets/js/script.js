@@ -21,6 +21,9 @@ searchCityBtn[0].addEventListener("click", function () {
         console.log(res)
         var lat = res.city.coord.lat;
         var lon = res.city.coord.lon;
+       
+      
+        
         //city date ,temp wind humidity uv index with color 
 
         var multiDay = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&exclude=minutely,hourly&appid=${apiKey}`
@@ -30,6 +33,8 @@ searchCityBtn[0].addEventListener("click", function () {
 
         }).then(function (data) {
             console.log(data)
+            localStorage
+           var pCity = document.getElementById(city)
             //var today = document.getElementById("today")
             var date = moment(data.current.dt * 1000).format("MM/DD/YYYY")
             //today.textContent = date;
@@ -49,18 +54,36 @@ searchCityBtn[0].addEventListener("click", function () {
             var currentUvi = data.current.uvi
             uvi.textContent = "UV Index: " + currentUvi
 
-           
-
-                var fiveDayForecast = function (forecast) {
-
-                    for (let i = 1; i < 6; i++) {
-
-                        var fiveDayDate = moment(data.daily[1].dt * 1000).format("MM/DD/YYY")
-                        console.log(fiveDayDate);
-                    
-                }
-            }
-        })
+            
         
-    }
-    );})       
+                
+    
+                    for (let i = 1; i < 6; i++) {
+                        var pCity = document.getElementById("city" + i)
+
+                        var newDate = document.getElementById("date" + i)
+                        var fiveDayDate = moment(data.daily[i].dt * 1000).format("MM/DD/YY")
+                        console.log(fiveDayDate)
+                        var newWind = data.daily[i].wind_speed
+                        var newHumidity = data.daily[i].humidity
+                        console.log(newHumidity)
+                        newDate.textContent= fiveDayDate
+                        var newIcons = document.getElementById("icon" + i)                     
+                        var iconUrl = "http://openweathermap.org/img/wn/" + data.daily[i].weather[0].icon + "@2x.png";
+                        var icon= document.createElement('img');
+                        icon.src =iconUrl;
+                        document.getElementById("icon" + i).appendChild(icon);
+
+                        var pWind = document.getElementById("wind" + i)
+                        pWind.textContent=`Wind:${newWind}mph`;
+
+                        var pHumidity = document.getElementById("Humidity" + i)
+                        pHumidity.textContent = "Humidity:" + newHumidity + "%";
+
+
+
+                    }              
+                });    
+            })
+                
+               })
